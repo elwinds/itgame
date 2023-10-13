@@ -1,0 +1,42 @@
+﻿@import './variables.scss';
+@import './fonts.scss';
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $bcgColor;
+    font-family: "Manrope";
+    font-size: 16px;
+    font-weight: 400;
+    color: $white;
+    // scrollbar-width: thin;
+    // scrollbar-color: $halfAccent $greyColor;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 44px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+}

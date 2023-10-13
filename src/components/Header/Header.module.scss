@@ -1,0 +1,36 @@
+﻿@import 'src/styles/variables.scss';
+@import 'src/styles/mixins.scss';
+
+.container {
+    width: 100%;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+
+    &__item {
+        padding: 20px 0;
+        border-bottom: 4px solid transparent;
+
+        a {
+            color: $white;
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 20px;
+            text-transform: uppercase;
+        }
+
+        &--active {
+            @include border-purple-gradient;
+            border-bottom: 4px solid transparent;
+
+            a {
+                @include purple-gradient-text;
+            }
+        }
+    }
+}

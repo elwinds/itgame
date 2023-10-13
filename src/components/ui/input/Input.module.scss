@@ -1,0 +1,31 @@
+﻿@import '../../../styles/variables.scss';
+
+.container {
+    width: 100%;
+}
+
+.input {
+    width: 72%;
+    height: 32px;
+    border-radius: 15px;
+    border: none;
+    border-bottom: 2px solid $purple;
+    background: $darkViolet;
+    color: $white;
+    padding: 5px 20px;
+
+
+    &::placeholder {
+        color: $purple;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}
+

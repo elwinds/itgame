@@ -1,0 +1,130 @@
+﻿@import 'src/styles/variables.scss';
+@import 'src/styles/mixins.scss';
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: end;
+}
+
+.card {
+    width: 40%;
+    height: 92%;
+    border-radius: 20px;
+    background-color: $bcgColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2% 25px;
+
+    &__phrase {
+        height: 150px;
+        width: 100%;
+        position: relative;
+    }
+
+    &__avatar {
+        border: 3px solid $orange;
+        width: 55%;
+        aspect-ratio: 1/1;
+        border-radius: 160px;
+        position: relative;
+        overflow: hidden;
+        background: $purpleGradient;
+    
+        &__img {
+            position: absolute;
+            width: 100%;
+            height: 105%;
+        }
+    }
+
+    &__name {
+        margin: 20px 0;
+        height: 15%;
+    }
+}
+
+
+
+.actions {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40%;
+    @include orange-gradient-text;
+
+    
+}
+
+.btn {
+    width: fit-content;
+    
+    &__icon {
+        border-radius: 100px;
+
+        &:hover {
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+
+@keyframes anim {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    70% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+}
+
+.animateSpeech {
+    animation: anim 3000ms linear forwards;
+}
+
+.speech {
+    background: $violet;
+    position: relative;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    max-width: 320px;
+    opacity: 0;
+    text-align: center;
+}
+
+.speech::after {
+    content: "";
+    border: 20px solid transparent;
+    position: absolute;
+}
+
+.bottom.speech::after {
+    border-top-color: $violet;
+    border-bottom: 0;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -20px;
+}

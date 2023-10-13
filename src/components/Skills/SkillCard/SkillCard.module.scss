@@ -1,0 +1,86 @@
+﻿@import 'src/styles/variables.scss';
+@import 'src/styles/mixins.scss';
+
+.card {
+    position: relative;
+    width: 14.5rem;
+    height: 18rem;
+    overflow: hidden;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.background {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+}
+
+.card:nth-child(1) .background {
+    background-image: url('../../../../public/assets/images/background-start.svg');
+    background-position: 30%;
+}
+
+.card:hover .background {
+    background-position: 30% -15px;
+}
+
+.card:hover .background::after {
+    opacity: 1;
+}
+
+.card:hover .text {
+    margin: 1rem 0 0 0;
+}
+
+.star {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 40px;
+}
+
+.text {
+    text-align: center;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    transform: translate(0, -100%);
+    justify-content: top;
+    align-items: center;
+    margin: 4rem 0 0 0;
+    transition: all 0.3s ease;
+    color: $purple;
+}
+
+.desc {
+    font-size: 16px;
+    text-align: center;
+    margin: 5rem 2rem 0 2rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    @include orange-gradient-text;
+}
+
+.card:hover .desc {
+    opacity: 1;
+    margin: 0rem 2rem 0 2rem;
+}
+
+.error {
+    color: $white;
+    font-size: 12px;
+    text-align: center;
+}
+
+.btn {
+    &__icon {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+

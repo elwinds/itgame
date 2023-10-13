@@ -1,0 +1,26 @@
+﻿@import 'src/styles/variables.scss';
+@import 'src/styles/mixins.scss';
+
+.container {
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    width: 75%;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 2px solid transparent;
+    @include border-orange-gradient;
+    @include orange-gradient-text;
+    
+    &__icon {
+        width: 54px;
+        height: 54px;
+    }
+}

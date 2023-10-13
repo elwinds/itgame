@@ -1,0 +1,30 @@
+﻿@import 'src/styles/variables.scss';
+
+.bar {
+    --progress-width: 100%;
+    width: 100%;
+    height: 16px;
+    border-radius: 20px;
+    background: $white;
+    position: relative;
+    margin-bottom: 20px;
+
+    &__text {
+        position: relative;
+        z-index: 15;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        background: $orangePurpleGraient;
+        width: var(--progress-width);
+        // width: 100%;
+        z-index: 10;
+        height: 16px;
+        border-radius: 20px;
+        top: 0;
+    }
+}

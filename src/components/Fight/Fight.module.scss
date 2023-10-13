@@ -1,0 +1,132 @@
+﻿@import 'src/styles/variables.scss';
+@import 'src/styles/mixins.scss';
+
+.container {
+    background-image: url('../../../public/assets/images/background-start.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 86vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.title {
+    position: absolute;
+    @include orange-gradient-text;
+}
+
+.relative {
+    width: 70vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-image: url('../../../public/assets/images/light.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.circle {
+    border-radius: 1247px;
+    border: 1px solid $grey;
+    margin: auto;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.one {
+    height: 70vh;
+    aspect-ratio: 1/1;
+    animation: 170.5s a infinite linear;
+}
+
+.two {
+    height: 60vh;
+    aspect-ratio: 1/1;
+    animation: 170.5s a infinite linear;
+}
+
+.three {
+    height: 50vh;
+    aspect-ratio: 1/1;
+    animation: 170.5s a infinite linear;
+}
+
+.stopAnimation {
+    animation-play-state: paused;
+}
+
+.four {
+    height: 170px;
+    width: 170px;
+    border: 2px solid $orange;
+    overflow: hidden;
+    background: $purpleGradient;
+
+    &__img {
+        position: absolute;
+        width: 100%;
+        height: 105%;
+    }
+}
+
+.inside {
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    border: 1px solid $grey;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+        border: 1px solid $orange;
+    }
+
+    &__container {
+        border-radius: 100px;
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        background: $purpleGradient;
+        border: 1px solid $purple;
+        overflow: hidden;
+    }
+
+    &__img {
+        position: absolute;
+        width: 100%;
+        height: 105%;
+    }
+}
+
+.one .inside {
+    top: 430px;
+    transform: rotate(180deg);
+}
+
+.two .inside {
+    top: 10px;
+    left: -261px;
+    transform: rotate(-37deg);
+}
+
+.three .inside {
+    top: 129px;
+    transform: rotate(90deg);
+    left: 300px;
+}
+
+@keyframes a {
+    0% {}
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
